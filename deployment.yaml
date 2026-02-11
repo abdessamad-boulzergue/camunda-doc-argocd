@@ -18,7 +18,7 @@ spec:
         - name: regcred
       containers:
       - name: camunda-doc-gen
-        image: docker.io/abdosblz/camunda-doc-gen:latest
+        image: docker.io/abdosblz/camunda-doc-gen:0.0.1
         ports:
         - containerPort: 80
         imagePullPolicy: IfNotPresent
