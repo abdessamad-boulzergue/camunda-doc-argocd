@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camunda-doc-gen
+  labels:
+    app: camunda-doc-gen
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camunda-doc-gen
+  template:
+    metadata:
+      labels:
+        app: camunda-doc-gen
+    spec:
+      containers:
+      - name: camunda-doc-gen
+        image: docker.io/abdosblz/camunda-doc-gen:latest
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: IfNotPresent
