@@ -16,7 +16,7 @@ spec:
           service:
             name: camunda-doc-gen
             port:
-              number: 8080
+              number: 80
   # tls: # Uncomment to enable TLS
   # - hosts:
   #   - camunda-doc-gen.example.com

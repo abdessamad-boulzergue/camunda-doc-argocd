@@ -20,5 +20,5 @@ spec:
       - name: camunda-doc-gen
         image: docker.io/abdosblz/camunda-doc-gen:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         imagePullPolicy: IfNotPresent
