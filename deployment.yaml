@@ -14,6 +14,8 @@ spec:
       labels:
         app: camunda-doc-gen
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
       - name: camunda-doc-gen
         image: docker.io/abdosblz/camunda-doc-gen:latest
