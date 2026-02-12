@@ -22,3 +22,6 @@ spec:
         ports:
         - containerPort: 80
         imagePullPolicy: IfNotPresent
+        env:
+        - name: API_URL
+          value: http://camunda-doc-gen-backend.example.com:8080
