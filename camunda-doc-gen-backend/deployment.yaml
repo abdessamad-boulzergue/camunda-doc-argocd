@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camunda-doc-gen-backend
+  labels:
+    app: camunda-doc-gen-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camunda-doc-gen-backend
+  template:
+    metadata:
+      labels:
+        app: camunda-doc-gen-backend
+    spec:
+      containers:
+      - name: camunda-doc-gen-backend
+        image: abdos/camunda-doc-gen-backend:latest
+        ports:
+        - containerPort: 8080
