@@ -14,8 +14,10 @@ spec:
       labels:
         app: camunda-doc-gen-backend
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
       - name: camunda-doc-gen-backend
-        image: abdos/camunda-doc-gen-backend:latest
+        image: docker.io/abdosblz/camunda-doc-gen-backend:4
         ports:
         - containerPort: 8080
