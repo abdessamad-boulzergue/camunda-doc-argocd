@@ -24,4 +24,4 @@ spec:
         imagePullPolicy: IfNotPresent
         env:
         - name: API_URL
-          value: http://camunda-doc-gen-backend.example.com
+          value: http://camunda-doc-gen-backend.example.com/api
