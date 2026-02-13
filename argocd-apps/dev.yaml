@@ -9,7 +9,7 @@ spec:
   project: camunda-doc-gen
   source:
     repoURL: https://github.com/abdessamad-boulzergue/camunda-doc-argocd.git
-    targetRevision: feat/organize-env
+    targetRevision: main
     path: charts/camunda-doc-gen
     helm:
       valueFiles:
@@ -34,7 +34,7 @@ spec:
   project: camunda-doc-gen
   source:
     repoURL: https://github.com/abdessamad-boulzergue/camunda-doc-argocd.git
-    targetRevision: HEAD
+    targetRevision: main
     path: charts/camunda-doc-gen-backend
     helm:
       valueFiles:
