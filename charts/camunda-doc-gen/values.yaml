@@ -28,4 +28,4 @@ ingress:
           pathType: Prefix
 
 env:
-  API_URL: "http://camunda-doc-gen-backend.example.com/api"
+  API_URL: "http://camunda-doc-gen.example.com/api"
