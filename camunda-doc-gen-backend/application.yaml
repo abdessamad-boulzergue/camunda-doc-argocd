@@ -4,13 +4,13 @@ metadata:
   name: camunda-doc-gen-backend
   namespace: argocd
 spec:
-  project: default
+  project: camunda-doc-gen
   source:
     repoURL: https://github.com/abdessamad-boulzergue/camunda-doc-argocd.git # TODO: Update this
     targetRevision: HEAD
     path: camunda-doc-gen-backend
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: default
   syncPolicy:
     automated:

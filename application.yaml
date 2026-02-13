@@ -4,7 +4,7 @@ metadata:
   name: camunda-doc-gen
   namespace: argocd
 spec:
-  project: default
+  project: camunda-doc-gen
   source:
     repoURL: https://github.com/abdessamad-boulzergue/camunda-doc-argocd.git # TODO: Update this
     targetRevision: HEAD
