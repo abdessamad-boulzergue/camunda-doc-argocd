@@ -1,0 +1,9 @@
+ingress:
+  hosts:
+    - host: camunda-doc-gen-staging.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+
+env:
+  API_URL: "http://camunda-doc-gen-backend-staging.example.com/api"

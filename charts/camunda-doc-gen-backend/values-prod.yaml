@@ -1,0 +1,6 @@
+ingress:
+  hosts:
+    - host: camunda-doc-gen-backend-prod.example.com
+      paths:
+        - path: /
+          pathType: Prefix

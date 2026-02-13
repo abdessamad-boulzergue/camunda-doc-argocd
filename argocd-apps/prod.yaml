@@ -1,0 +1,49 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: camunda-doc-gen-prod
+  namespace: argocd
+  labels:
+    env: prod
+spec:
+  project: camunda-doc-gen
+  source:
+    repoURL: https://github.com/abdessamad-boulzergue/camunda-doc-argocd.git
+    targetRevision: feat/organize-env
+    path: charts/camunda-doc-gen
+    helm:
+      valueFiles:
+        - values.yaml
+        - values-prod.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: camunda-doc-prod
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: camunda-doc-gen-backend-prod
+  namespace: argocd
+  labels:
+    env: prod
+spec:
+  project: camunda-doc-gen
+  source:
+    repoURL: https://github.com/abdessamad-boulzergue/camunda-doc-argocd.git
+    targetRevision: HEAD
+    path: charts/camunda-doc-gen-backend
+    helm:
+      valueFiles:
+        - values.yaml
+        - values-prod.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: camunda-doc-prod
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
